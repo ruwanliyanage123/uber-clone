@@ -1,9 +1,10 @@
 package com.uberclone.core.userservice.service.api;
 
 import com.uberclone.core.userservice.dto.UserDTO;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service
+@Component
 public interface UserService {
 
     /**
