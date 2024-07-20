@@ -36,5 +36,4 @@ public class UserServiceImpl implements UserService {
         final Optional<UserEntity> userEntity = userRepository.findById(userId);
         return UserMapper.mapToDto(userEntity.get());
     }
-
 }

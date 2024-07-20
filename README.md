@@ -25,4 +25,3 @@ Unlike spring, we don't need to use the @Configuration and @Bean for the depende
 We need both UserDTO and User Entity
 UserDTO - dealing with the client requests.
 UserEntity - dealing with the database persistence.
-
