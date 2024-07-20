@@ -22,3 +22,6 @@ To build the application
 @Service - This need to add for the impl class also. otherwise it will not able to resolve the dependency.
 Unlike spring, we don't need to use the @Configuration and @Bean for the dependency injection. that part has been automated here. 
 
+We need both UserDTO and User Entity
+UserDTO - dealing with the client requests.
+UserEntity - dealing with the database persistence.

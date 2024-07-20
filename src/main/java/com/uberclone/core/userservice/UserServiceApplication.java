@@ -2,12 +2,13 @@ package com.uberclone.core.userservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+
+@SpringBootApplication
+@EnableJpaRepositories(basePackages = "com.uberclone.core.userservice.dao")
 public class UserServiceApplication {
 	public static void main(String[] args) {
-		//need to add the hibernate erro skip code
 		SpringApplication.run(UserServiceApplication.class, args);
 	}
 }
