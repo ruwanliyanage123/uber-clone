@@ -5,7 +5,9 @@ import com.uberclone.core.userservice.service.api.UserService;
 
 public class UserServiceImpl implements UserService {
     @Override
-    public void createPatient(UserDTO userDTO) {
-
+    public UserDTO createPatient(UserDTO userDTO) {
+        final UserDTO userDTO1 = new UserDTO();
+        userDTO1.setUserName(userDTO1.getUserName()+" appended");
+        return userDTO1;
     }
 }

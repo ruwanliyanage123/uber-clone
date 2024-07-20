@@ -1,14 +1,18 @@
 package com.uberclone.core.userservice.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import com.uberclone.core.userservice.dto.UserDTO;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/user-service")
 public class UserController {
-    @GetMapping()
-    public String creteUser() {
-        return "hellow Im ruwan";
+    @PostMapping()
+    public ResponseEntity<UserDTO> creteUser(@RequestBody UserDTO userDTO) {
+        return new ResponseEntity<>(userDTO, HttpStatus.OK);
     }
 }
