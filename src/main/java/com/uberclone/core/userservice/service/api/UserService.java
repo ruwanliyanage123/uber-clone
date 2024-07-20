@@ -1,7 +1,9 @@
 package com.uberclone.core.userservice.service.api;
 
 import com.uberclone.core.userservice.dto.UserDTO;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface UserService {
 
     /**
@@ -9,5 +11,5 @@ public interface UserService {
      *
      * @param userDTO user dto
      */
-    public abstract void createPatient(UserDTO userDTO);
+    public abstract UserDTO createPatient(UserDTO userDTO);
 }
